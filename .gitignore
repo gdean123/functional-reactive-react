@@ -1,0 +1,4 @@
+/client/node_modules/
+/client/build/
+/client/.idea/
+.DS_Store
