@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { connect } from './Connect';
-import { currentValueStream } from './CurrentValueStream';
+import { connect } from './support/Connect';
+import { currentValueStream } from '../domain/streams/CurrentValueStream';
 
 type LabelWidgetProperties = { value: number };
 

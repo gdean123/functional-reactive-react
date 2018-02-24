@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as _ from 'lodash';
 import * as Rx from 'rxjs';
 
-import { combineLatestObject } from './CombineLatestObject';
+import { combineLatestObject } from '../../domain/operators/CombineLatestObject';
 
 type Value = any;
 type ValueStream = Rx.Observable<Value>;

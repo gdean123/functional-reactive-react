@@ -1,6 +1,6 @@
 import { Subject } from 'rxjs/Rx';
 import * as React from 'react';
-import { connect } from './Connect';
+import { connect } from './support/Connect';
 
 export const didClickIncrementStream = new Subject();
 

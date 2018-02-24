@@ -1,6 +1,6 @@
 import { Subject } from 'rxjs/Rx';
 
-import { combineLatestObject } from '../src/CombineLatestObject';
+import { combineLatestObject } from '../../../src/domain/operators/CombineLatestObject';
 
 describe('combineLatestObject', () => {
   let colorStream: Subject<string>;

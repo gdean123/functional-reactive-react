@@ -1,4 +1,4 @@
-import { didClickIncrementStream } from './ButtonWidget';
+import { didClickIncrementStream } from '../../presentation/ButtonWidget';
 
 export const currentValueStream =
   didClickIncrementStream

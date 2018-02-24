@@ -1,7 +1,7 @@
 import * as Rx from 'rxjs';
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { connect } from '../src/Connect';
+import { connect } from '../../../src/presentation/support/Connect';
 
 describe('connect', () => {
   describe('receiving stream values', () => {
