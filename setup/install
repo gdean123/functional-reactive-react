@@ -1,0 +1,48 @@
+#!/bin/bash
+
+SETUP_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+main () {
+    pushd $SETUP_DIRECTORY > /dev/null
+        install_homebrew
+        install_bash_it
+        install_brew_bundle
+        install_vim
+    popd > /dev/null
+}
+
+install_homebrew () {
+    if [ -x "$(which brew)" ]; then
+        echo "Homebrew is already installed."
+    else
+        echo | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        brew update
+    fi
+}
+
+install_bash_it () {
+    if [[ -d ~/.bash_it ]]; then
+        echo "Bash it is already installed."
+    else
+        git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+        ~/.bash_it/install.sh --silent
+
+        cp ~/.bash_profile ~/.bash_profile ~/.bash_profile.bash_it.bak
+        cp $SETUP_DIRECTORY/bash_it/.bash_profile ~/.bash_profile
+    fi
+}
+
+install_brew_bundle () {
+    brew bundle
+}
+
+install_vim () {
+    if [[ -d ~/.vim ]]; then
+        echo "The vim configuration is already setup."
+    else
+        git clone https://github.com/pivotal/vim-config.git ~/.vim
+        ~/.vim/bin/install
+    fi
+}
+
+main

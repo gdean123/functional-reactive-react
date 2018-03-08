@@ -1,0 +1,10 @@
+cask 'iterm2'
+cask 'textmate'
+cask 'flycut'
+cask 'webstorm'
+
+brew 'node'
+brew 'vim'
+brew 'jq'
+brew 'wget'
+brew 'tree'
